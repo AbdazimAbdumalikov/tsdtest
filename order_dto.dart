@@ -34,11 +34,11 @@ class OrderDTO with _$OrderDTO {
     @JsonKey(name: 'to_city_id') CityDTO? toCity,
     List<PointDTO?>? points,
     @JsonKey(name: 'count_points') int? countPoints,
-    @JsonKey(name: 'order_type') int? orderType,
     @JsonKey(name: 'order_status') OrderStatusDTO? orderStatus,
     // String? status,
     @Default(false) bool isCurrent,
     String? address,
+    int? order_type,
     TransportDTO? transport,
   }) = _OrderDTO;
 
