@@ -46,9 +46,9 @@ _$_OrderDTO _$$_OrderDTOFromJson(Map<String, dynamic> json) => _$_OrderDTO(
           ? null
           : OrderStatusDTO.fromJson(
               json['order_status'] as Map<String, dynamic>),
+      orderType: json['order_type'] as String?,
       isCurrent: json['isCurrent'] as bool? ?? false,
       address: json['address'] as String?,
-      order_type: json['order_type'] as int?,
       transport: json['transport'] == null
           ? null
           : TransportDTO.fromJson(json['transport'] as Map<String, dynamic>),
@@ -81,9 +81,9 @@ Map<String, dynamic> _$$_OrderDTOToJson(_$_OrderDTO instance) =>
       'points': instance.points,
       'count_points': instance.countPoints,
       'order_status': instance.orderStatus,
+      'order_type': instance.orderType,
       'isCurrent': instance.isCurrent,
       'address': instance.address,
-      'order_type': instance.order_type,
       'transport': instance.transport,
     };
 
