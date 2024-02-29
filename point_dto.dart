@@ -32,7 +32,7 @@ class PointDTO with _$PointDTO {
     @JsonKey(name: 'created_at') String? createdAt,
     List<ProductDTO>? products,
     List<ContainerDTO>? containers,
-    @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
+    int? our_pharmacy,
     String? pharmacy_number,
   }) = _PointDTO;
 
