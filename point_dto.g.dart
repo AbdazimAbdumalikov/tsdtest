@@ -35,6 +35,7 @@ _$_PointDTO _$$_PointDTOFromJson(Map<String, dynamic> json) => _$_PointDTO(
       containers: (json['containers'] as List<dynamic>?)
           ?.map((e) => ContainerDTO.fromJson(e as Map<String, dynamic>))
           .toList(),
+      ourPharmacy: json['our_pharmacy'] as String?,
       pharmacy_number: json['pharmacy_number'] as String?,
     );
 
@@ -63,6 +64,7 @@ Map<String, dynamic> _$$_PointDTOToJson(_$_PointDTO instance) =>
       'created_at': instance.createdAt,
       'products': instance.products,
       'containers': instance.containers,
+      'our_pharmacy': instance.ourPharmacy,
       'pharmacy_number': instance.pharmacy_number,
     };
 
