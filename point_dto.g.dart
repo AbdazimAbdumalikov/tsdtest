@@ -35,7 +35,7 @@ _$_PointDTO _$$_PointDTOFromJson(Map<String, dynamic> json) => _$_PointDTO(
       containers: (json['containers'] as List<dynamic>?)
           ?.map((e) => ContainerDTO.fromJson(e as Map<String, dynamic>))
           .toList(),
-      ourPharmacy: json['our_pharmacy'] as String?,
+      ourPharmacy: json['our_pharmacy'] as int?,
       pharmacy_number: json['pharmacy_number'] as String?,
     );
 

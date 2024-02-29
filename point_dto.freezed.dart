@@ -54,7 +54,7 @@ mixin _$PointDTO {
   List<ProductDTO>? get products => throw _privateConstructorUsedError;
   List<ContainerDTO>? get containers => throw _privateConstructorUsedError;
   @JsonKey(name: 'our_pharmacy')
-  String? get ourPharmacy => throw _privateConstructorUsedError;
+  int? get ourPharmacy => throw _privateConstructorUsedError;
   String? get pharmacy_number => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -92,7 +92,7 @@ abstract class $PointDTOCopyWith<$Res> {
       @JsonKey(name: 'created_at') String? createdAt,
       List<ProductDTO>? products,
       List<ContainerDTO>? containers,
-      @JsonKey(name: 'our_pharmacy') String? ourPharmacy,
+      @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
       String? pharmacy_number});
 }
 
@@ -231,7 +231,7 @@ class _$PointDTOCopyWithImpl<$Res, $Val extends PointDTO>
       ourPharmacy: freezed == ourPharmacy
           ? _value.ourPharmacy
           : ourPharmacy // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       pharmacy_number: freezed == pharmacy_number
           ? _value.pharmacy_number
           : pharmacy_number // ignore: cast_nullable_to_non_nullable
@@ -271,7 +271,7 @@ abstract class _$$_PointDTOCopyWith<$Res> implements $PointDTOCopyWith<$Res> {
       @JsonKey(name: 'created_at') String? createdAt,
       List<ProductDTO>? products,
       List<ContainerDTO>? containers,
-      @JsonKey(name: 'our_pharmacy') String? ourPharmacy,
+      @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
       String? pharmacy_number});
 }
 
@@ -408,7 +408,7 @@ class __$$_PointDTOCopyWithImpl<$Res>
       ourPharmacy: freezed == ourPharmacy
           ? _value.ourPharmacy
           : ourPharmacy // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       pharmacy_number: freezed == pharmacy_number
           ? _value.pharmacy_number
           : pharmacy_number // ignore: cast_nullable_to_non_nullable
@@ -526,7 +526,7 @@ class _$_PointDTO implements _PointDTO {
 
   @override
   @JsonKey(name: 'our_pharmacy')
-  final String? ourPharmacy;
+  final int? ourPharmacy;
   @override
   final String? pharmacy_number;
 
@@ -649,7 +649,7 @@ abstract class _PointDTO implements PointDTO {
       @JsonKey(name: 'created_at') final String? createdAt,
       final List<ProductDTO>? products,
       final List<ContainerDTO>? containers,
-      @JsonKey(name: 'our_pharmacy') final String? ourPharmacy,
+      @JsonKey(name: 'our_pharmacy') final int? ourPharmacy,
       final String? pharmacy_number}) = _$_PointDTO;
 
   factory _PointDTO.fromJson(Map<String, dynamic> json) = _$_PointDTO.fromJson;
@@ -712,7 +712,7 @@ abstract class _PointDTO implements PointDTO {
   List<ContainerDTO>? get containers;
   @override
   @JsonKey(name: 'our_pharmacy')
-  String? get ourPharmacy;
+  int? get ourPharmacy;
   @override
   String? get pharmacy_number;
   @override
