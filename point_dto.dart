@@ -26,7 +26,6 @@ class PointDTO with _$PointDTO {
     dynamic avatar,
     @JsonKey(name: 'count_products') int? countProducts,
     @JsonKey(name: 'point_type') int? pointType,
-    @JsonKey(name: 'order_type') int? orderType,
     @JsonKey(name: 'is_deviation') int? isDeviation,
     @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
     @JsonKey(name: 'eta') String? eta,

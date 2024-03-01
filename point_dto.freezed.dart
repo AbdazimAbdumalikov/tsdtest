@@ -43,8 +43,6 @@ mixin _$PointDTO {
   int? get countProducts => throw _privateConstructorUsedError;
   @JsonKey(name: 'point_type')
   int? get pointType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'order_type')
-  int? get orderType => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deviation')
   int? get isDeviation => throw _privateConstructorUsedError;
   @JsonKey(name: 'our_pharmacy')
@@ -86,7 +84,6 @@ abstract class $PointDTOCopyWith<$Res> {
       dynamic avatar,
       @JsonKey(name: 'count_products') int? countProducts,
       @JsonKey(name: 'point_type') int? pointType,
-      @JsonKey(name: 'order_type') int? orderType,
       @JsonKey(name: 'is_deviation') int? isDeviation,
       @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
       @JsonKey(name: 'eta') String? eta,
@@ -126,7 +123,6 @@ class _$PointDTOCopyWithImpl<$Res, $Val extends PointDTO>
     Object? avatar = freezed,
     Object? countProducts = freezed,
     Object? pointType = freezed,
-    Object? orderType = freezed,
     Object? isDeviation = freezed,
     Object? ourPharmacy = freezed,
     Object? eta = freezed,
@@ -204,10 +200,6 @@ class _$PointDTOCopyWithImpl<$Res, $Val extends PointDTO>
           ? _value.pointType
           : pointType // ignore: cast_nullable_to_non_nullable
               as int?,
-      orderType: freezed == orderType
-          ? _value.orderType
-          : orderType // ignore: cast_nullable_to_non_nullable
-              as int?,
       isDeviation: freezed == isDeviation
           ? _value.isDeviation
           : isDeviation // ignore: cast_nullable_to_non_nullable
@@ -265,7 +257,6 @@ abstract class _$$_PointDTOCopyWith<$Res> implements $PointDTOCopyWith<$Res> {
       dynamic avatar,
       @JsonKey(name: 'count_products') int? countProducts,
       @JsonKey(name: 'point_type') int? pointType,
-      @JsonKey(name: 'order_type') int? orderType,
       @JsonKey(name: 'is_deviation') int? isDeviation,
       @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
       @JsonKey(name: 'eta') String? eta,
@@ -303,7 +294,6 @@ class __$$_PointDTOCopyWithImpl<$Res>
     Object? avatar = freezed,
     Object? countProducts = freezed,
     Object? pointType = freezed,
-    Object? orderType = freezed,
     Object? isDeviation = freezed,
     Object? ourPharmacy = freezed,
     Object? eta = freezed,
@@ -381,10 +371,6 @@ class __$$_PointDTOCopyWithImpl<$Res>
           ? _value.pointType
           : pointType // ignore: cast_nullable_to_non_nullable
               as int?,
-      orderType: freezed == orderType
-          ? _value.orderType
-          : orderType // ignore: cast_nullable_to_non_nullable
-              as int?,
       isDeviation: freezed == isDeviation
           ? _value.isDeviation
           : isDeviation // ignore: cast_nullable_to_non_nullable
@@ -438,7 +424,6 @@ class _$_PointDTO implements _PointDTO {
       this.avatar,
       @JsonKey(name: 'count_products') this.countProducts,
       @JsonKey(name: 'point_type') this.pointType,
-      @JsonKey(name: 'order_type') this.orderType,
       @JsonKey(name: 'is_deviation') this.isDeviation,
       @JsonKey(name: 'our_pharmacy') this.ourPharmacy,
       @JsonKey(name: 'eta') this.eta,
@@ -493,9 +478,6 @@ class _$_PointDTO implements _PointDTO {
   @JsonKey(name: 'point_type')
   final int? pointType;
   @override
-  @JsonKey(name: 'order_type')
-  final int? orderType;
-  @override
   @JsonKey(name: 'is_deviation')
   final int? isDeviation;
   @override
@@ -532,7 +514,7 @@ class _$_PointDTO implements _PointDTO {
 
   @override
   String toString() {
-    return 'PointDTO(id: $id, name: $name, address: $address, crossdockingId: $crossdockingId, crossdockName: $crossdockName, crossdockLat: $crossdockLat, crossdockLong: $crossdockLong, status: $status, date: $date, from: $from, to: $to, lat: $lat, long: $long, type: $type, avatar: $avatar, countProducts: $countProducts, pointType: $pointType, orderType: $orderType, isDeviation: $isDeviation, ourPharmacy: $ourPharmacy, eta: $eta, createdAt: $createdAt, products: $products, containers: $containers, pharmacy_number: $pharmacy_number)';
+    return 'PointDTO(id: $id, name: $name, address: $address, crossdockingId: $crossdockingId, crossdockName: $crossdockName, crossdockLat: $crossdockLat, crossdockLong: $crossdockLong, status: $status, date: $date, from: $from, to: $to, lat: $lat, long: $long, type: $type, avatar: $avatar, countProducts: $countProducts, pointType: $pointType, isDeviation: $isDeviation, ourPharmacy: $ourPharmacy, eta: $eta, createdAt: $createdAt, products: $products, containers: $containers, pharmacy_number: $pharmacy_number)';
   }
 
   @override
@@ -563,8 +545,6 @@ class _$_PointDTO implements _PointDTO {
                 other.countProducts == countProducts) &&
             (identical(other.pointType, pointType) ||
                 other.pointType == pointType) &&
-            (identical(other.orderType, orderType) ||
-                other.orderType == orderType) &&
             (identical(other.isDeviation, isDeviation) ||
                 other.isDeviation == isDeviation) &&
             (identical(other.ourPharmacy, ourPharmacy) ||
@@ -600,7 +580,6 @@ class _$_PointDTO implements _PointDTO {
         const DeepCollectionEquality().hash(avatar),
         countProducts,
         pointType,
-        orderType,
         isDeviation,
         ourPharmacy,
         eta,
@@ -643,7 +622,6 @@ abstract class _PointDTO implements PointDTO {
       final dynamic avatar,
       @JsonKey(name: 'count_products') final int? countProducts,
       @JsonKey(name: 'point_type') final int? pointType,
-      @JsonKey(name: 'order_type') final int? orderType,
       @JsonKey(name: 'is_deviation') final int? isDeviation,
       @JsonKey(name: 'our_pharmacy') final int? ourPharmacy,
       @JsonKey(name: 'eta') final String? eta,
@@ -694,9 +672,6 @@ abstract class _PointDTO implements PointDTO {
   @override
   @JsonKey(name: 'point_type')
   int? get pointType;
-  @override
-  @JsonKey(name: 'order_type')
-  int? get orderType;
   @override
   @JsonKey(name: 'is_deviation')
   int? get isDeviation;
