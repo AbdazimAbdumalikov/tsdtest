@@ -63,8 +63,7 @@ mixin _$OrderDTO {
   @JsonKey(name: 'order_status')
   OrderStatusDTO? get orderStatus => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_type')
-  String? get orderType =>
-      throw _privateConstructorUsedError; // String? status,
+  int? get orderType => throw _privateConstructorUsedError; // String? status,
   bool get isCurrent => throw _privateConstructorUsedError;
   String? get address => throw _privateConstructorUsedError;
   TransportDTO? get transport => throw _privateConstructorUsedError;
@@ -106,7 +105,7 @@ abstract class $OrderDTOCopyWith<$Res> {
       List<PointDTO?>? points,
       @JsonKey(name: 'count_points') int? countPoints,
       @JsonKey(name: 'order_status') OrderStatusDTO? orderStatus,
-      @JsonKey(name: 'order_type') String? orderType,
+      @JsonKey(name: 'order_type') int? orderType,
       bool isCurrent,
       String? address,
       TransportDTO? transport});
@@ -264,7 +263,7 @@ class _$OrderDTOCopyWithImpl<$Res, $Val extends OrderDTO>
       orderType: freezed == orderType
           ? _value.orderType
           : orderType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       isCurrent: null == isCurrent
           ? _value.isCurrent
           : isCurrent // ignore: cast_nullable_to_non_nullable
@@ -362,7 +361,7 @@ abstract class _$$_OrderDTOCopyWith<$Res> implements $OrderDTOCopyWith<$Res> {
       List<PointDTO?>? points,
       @JsonKey(name: 'count_points') int? countPoints,
       @JsonKey(name: 'order_status') OrderStatusDTO? orderStatus,
-      @JsonKey(name: 'order_type') String? orderType,
+      @JsonKey(name: 'order_type') int? orderType,
       bool isCurrent,
       String? address,
       TransportDTO? transport});
@@ -522,7 +521,7 @@ class __$$_OrderDTOCopyWithImpl<$Res>
       orderType: freezed == orderType
           ? _value.orderType
           : orderType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       isCurrent: null == isCurrent
           ? _value.isCurrent
           : isCurrent // ignore: cast_nullable_to_non_nullable
@@ -655,7 +654,7 @@ class _$_OrderDTO implements _OrderDTO {
   final OrderStatusDTO? orderStatus;
   @override
   @JsonKey(name: 'order_type')
-  final String? orderType;
+  final int? orderType;
 // String? status,
   @override
   @JsonKey()
@@ -798,7 +797,7 @@ abstract class _OrderDTO implements OrderDTO {
       final List<PointDTO?>? points,
       @JsonKey(name: 'count_points') final int? countPoints,
       @JsonKey(name: 'order_status') final OrderStatusDTO? orderStatus,
-      @JsonKey(name: 'order_type') final String? orderType,
+      @JsonKey(name: 'order_type') final int? orderType,
       final bool isCurrent,
       final String? address,
       final TransportDTO? transport}) = _$_OrderDTO;
@@ -874,7 +873,7 @@ abstract class _OrderDTO implements OrderDTO {
   OrderStatusDTO? get orderStatus;
   @override
   @JsonKey(name: 'order_type')
-  String? get orderType;
+  int? get orderType;
   @override // String? status,
   bool get isCurrent;
   @override

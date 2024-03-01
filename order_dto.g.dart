@@ -46,7 +46,7 @@ _$_OrderDTO _$$_OrderDTOFromJson(Map<String, dynamic> json) => _$_OrderDTO(
           ? null
           : OrderStatusDTO.fromJson(
               json['order_status'] as Map<String, dynamic>),
-      orderType: json['order_type'] as String?,
+      orderType: json['order_type'] as int?,
       isCurrent: json['isCurrent'] as bool? ?? false,
       address: json['address'] as String?,
       transport: json['transport'] == null

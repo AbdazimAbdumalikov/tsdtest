@@ -35,7 +35,7 @@ class OrderDTO with _$OrderDTO {
     List<PointDTO?>? points,
     @JsonKey(name: 'count_points') int? countPoints,
     @JsonKey(name: 'order_status') OrderStatusDTO? orderStatus,
-    @JsonKey(name: 'order_type') String? orderType,
+    @JsonKey(name: 'order_type') int? orderType,
     // String? status,
     @Default(false) bool isCurrent,
     String? address,
