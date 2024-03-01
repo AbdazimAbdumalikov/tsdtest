@@ -47,13 +47,14 @@ mixin _$PointDTO {
   int? get orderType => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deviation')
   int? get isDeviation => throw _privateConstructorUsedError;
+  @JsonKey(name: 'our_pharmacy')
+  int? get ourPharmacy => throw _privateConstructorUsedError;
   @JsonKey(name: 'eta')
   String? get eta => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
   String? get createdAt => throw _privateConstructorUsedError;
   List<ProductDTO>? get products => throw _privateConstructorUsedError;
   List<ContainerDTO>? get containers => throw _privateConstructorUsedError;
-  int? get our_pharmacy => throw _privateConstructorUsedError;
   String? get pharmacy_number => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -87,11 +88,11 @@ abstract class $PointDTOCopyWith<$Res> {
       @JsonKey(name: 'point_type') int? pointType,
       @JsonKey(name: 'order_type') int? orderType,
       @JsonKey(name: 'is_deviation') int? isDeviation,
+      @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
       @JsonKey(name: 'eta') String? eta,
       @JsonKey(name: 'created_at') String? createdAt,
       List<ProductDTO>? products,
       List<ContainerDTO>? containers,
-      int? our_pharmacy,
       String? pharmacy_number});
 }
 
@@ -127,11 +128,11 @@ class _$PointDTOCopyWithImpl<$Res, $Val extends PointDTO>
     Object? pointType = freezed,
     Object? orderType = freezed,
     Object? isDeviation = freezed,
+    Object? ourPharmacy = freezed,
     Object? eta = freezed,
     Object? createdAt = freezed,
     Object? products = freezed,
     Object? containers = freezed,
-    Object? our_pharmacy = freezed,
     Object? pharmacy_number = freezed,
   }) {
     return _then(_value.copyWith(
@@ -211,6 +212,10 @@ class _$PointDTOCopyWithImpl<$Res, $Val extends PointDTO>
           ? _value.isDeviation
           : isDeviation // ignore: cast_nullable_to_non_nullable
               as int?,
+      ourPharmacy: freezed == ourPharmacy
+          ? _value.ourPharmacy
+          : ourPharmacy // ignore: cast_nullable_to_non_nullable
+              as int?,
       eta: freezed == eta
           ? _value.eta
           : eta // ignore: cast_nullable_to_non_nullable
@@ -227,10 +232,6 @@ class _$PointDTOCopyWithImpl<$Res, $Val extends PointDTO>
           ? _value.containers
           : containers // ignore: cast_nullable_to_non_nullable
               as List<ContainerDTO>?,
-      our_pharmacy: freezed == our_pharmacy
-          ? _value.our_pharmacy
-          : our_pharmacy // ignore: cast_nullable_to_non_nullable
-              as int?,
       pharmacy_number: freezed == pharmacy_number
           ? _value.pharmacy_number
           : pharmacy_number // ignore: cast_nullable_to_non_nullable
@@ -266,11 +267,11 @@ abstract class _$$_PointDTOCopyWith<$Res> implements $PointDTOCopyWith<$Res> {
       @JsonKey(name: 'point_type') int? pointType,
       @JsonKey(name: 'order_type') int? orderType,
       @JsonKey(name: 'is_deviation') int? isDeviation,
+      @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
       @JsonKey(name: 'eta') String? eta,
       @JsonKey(name: 'created_at') String? createdAt,
       List<ProductDTO>? products,
       List<ContainerDTO>? containers,
-      int? our_pharmacy,
       String? pharmacy_number});
 }
 
@@ -304,11 +305,11 @@ class __$$_PointDTOCopyWithImpl<$Res>
     Object? pointType = freezed,
     Object? orderType = freezed,
     Object? isDeviation = freezed,
+    Object? ourPharmacy = freezed,
     Object? eta = freezed,
     Object? createdAt = freezed,
     Object? products = freezed,
     Object? containers = freezed,
-    Object? our_pharmacy = freezed,
     Object? pharmacy_number = freezed,
   }) {
     return _then(_$_PointDTO(
@@ -388,6 +389,10 @@ class __$$_PointDTOCopyWithImpl<$Res>
           ? _value.isDeviation
           : isDeviation // ignore: cast_nullable_to_non_nullable
               as int?,
+      ourPharmacy: freezed == ourPharmacy
+          ? _value.ourPharmacy
+          : ourPharmacy // ignore: cast_nullable_to_non_nullable
+              as int?,
       eta: freezed == eta
           ? _value.eta
           : eta // ignore: cast_nullable_to_non_nullable
@@ -404,10 +409,6 @@ class __$$_PointDTOCopyWithImpl<$Res>
           ? _value._containers
           : containers // ignore: cast_nullable_to_non_nullable
               as List<ContainerDTO>?,
-      our_pharmacy: freezed == our_pharmacy
-          ? _value.our_pharmacy
-          : our_pharmacy // ignore: cast_nullable_to_non_nullable
-              as int?,
       pharmacy_number: freezed == pharmacy_number
           ? _value.pharmacy_number
           : pharmacy_number // ignore: cast_nullable_to_non_nullable
@@ -439,11 +440,11 @@ class _$_PointDTO implements _PointDTO {
       @JsonKey(name: 'point_type') this.pointType,
       @JsonKey(name: 'order_type') this.orderType,
       @JsonKey(name: 'is_deviation') this.isDeviation,
+      @JsonKey(name: 'our_pharmacy') this.ourPharmacy,
       @JsonKey(name: 'eta') this.eta,
       @JsonKey(name: 'created_at') this.createdAt,
       final List<ProductDTO>? products,
       final List<ContainerDTO>? containers,
-      this.our_pharmacy,
       this.pharmacy_number})
       : _products = products,
         _containers = containers;
@@ -498,6 +499,9 @@ class _$_PointDTO implements _PointDTO {
   @JsonKey(name: 'is_deviation')
   final int? isDeviation;
   @override
+  @JsonKey(name: 'our_pharmacy')
+  final int? ourPharmacy;
+  @override
   @JsonKey(name: 'eta')
   final String? eta;
   @override
@@ -524,13 +528,11 @@ class _$_PointDTO implements _PointDTO {
   }
 
   @override
-  final int? our_pharmacy;
-  @override
   final String? pharmacy_number;
 
   @override
   String toString() {
-    return 'PointDTO(id: $id, name: $name, address: $address, crossdockingId: $crossdockingId, crossdockName: $crossdockName, crossdockLat: $crossdockLat, crossdockLong: $crossdockLong, status: $status, date: $date, from: $from, to: $to, lat: $lat, long: $long, type: $type, avatar: $avatar, countProducts: $countProducts, pointType: $pointType, orderType: $orderType, isDeviation: $isDeviation, eta: $eta, createdAt: $createdAt, products: $products, containers: $containers, our_pharmacy: $our_pharmacy, pharmacy_number: $pharmacy_number)';
+    return 'PointDTO(id: $id, name: $name, address: $address, crossdockingId: $crossdockingId, crossdockName: $crossdockName, crossdockLat: $crossdockLat, crossdockLong: $crossdockLong, status: $status, date: $date, from: $from, to: $to, lat: $lat, long: $long, type: $type, avatar: $avatar, countProducts: $countProducts, pointType: $pointType, orderType: $orderType, isDeviation: $isDeviation, ourPharmacy: $ourPharmacy, eta: $eta, createdAt: $createdAt, products: $products, containers: $containers, pharmacy_number: $pharmacy_number)';
   }
 
   @override
@@ -565,14 +567,14 @@ class _$_PointDTO implements _PointDTO {
                 other.orderType == orderType) &&
             (identical(other.isDeviation, isDeviation) ||
                 other.isDeviation == isDeviation) &&
+            (identical(other.ourPharmacy, ourPharmacy) ||
+                other.ourPharmacy == ourPharmacy) &&
             (identical(other.eta, eta) || other.eta == eta) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             const DeepCollectionEquality().equals(other._products, _products) &&
             const DeepCollectionEquality()
                 .equals(other._containers, _containers) &&
-            (identical(other.our_pharmacy, our_pharmacy) ||
-                other.our_pharmacy == our_pharmacy) &&
             (identical(other.pharmacy_number, pharmacy_number) ||
                 other.pharmacy_number == pharmacy_number));
   }
@@ -600,11 +602,11 @@ class _$_PointDTO implements _PointDTO {
         pointType,
         orderType,
         isDeviation,
+        ourPharmacy,
         eta,
         createdAt,
         const DeepCollectionEquality().hash(_products),
         const DeepCollectionEquality().hash(_containers),
-        our_pharmacy,
         pharmacy_number
       ]);
 
@@ -643,11 +645,11 @@ abstract class _PointDTO implements PointDTO {
       @JsonKey(name: 'point_type') final int? pointType,
       @JsonKey(name: 'order_type') final int? orderType,
       @JsonKey(name: 'is_deviation') final int? isDeviation,
+      @JsonKey(name: 'our_pharmacy') final int? ourPharmacy,
       @JsonKey(name: 'eta') final String? eta,
       @JsonKey(name: 'created_at') final String? createdAt,
       final List<ProductDTO>? products,
       final List<ContainerDTO>? containers,
-      final int? our_pharmacy,
       final String? pharmacy_number}) = _$_PointDTO;
 
   factory _PointDTO.fromJson(Map<String, dynamic> json) = _$_PointDTO.fromJson;
@@ -699,6 +701,9 @@ abstract class _PointDTO implements PointDTO {
   @JsonKey(name: 'is_deviation')
   int? get isDeviation;
   @override
+  @JsonKey(name: 'our_pharmacy')
+  int? get ourPharmacy;
+  @override
   @JsonKey(name: 'eta')
   String? get eta;
   @override
@@ -708,8 +713,6 @@ abstract class _PointDTO implements PointDTO {
   List<ProductDTO>? get products;
   @override
   List<ContainerDTO>? get containers;
-  @override
-  int? get our_pharmacy;
   @override
   String? get pharmacy_number;
   @override

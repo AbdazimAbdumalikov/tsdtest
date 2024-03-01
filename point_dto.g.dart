@@ -27,6 +27,7 @@ _$_PointDTO _$$_PointDTOFromJson(Map<String, dynamic> json) => _$_PointDTO(
       pointType: json['point_type'] as int?,
       orderType: json['order_type'] as int?,
       isDeviation: json['is_deviation'] as int?,
+      ourPharmacy: json['our_pharmacy'] as int?,
       eta: json['eta'] as String?,
       createdAt: json['created_at'] as String?,
       products: (json['products'] as List<dynamic>?)
@@ -35,7 +36,6 @@ _$_PointDTO _$$_PointDTOFromJson(Map<String, dynamic> json) => _$_PointDTO(
       containers: (json['containers'] as List<dynamic>?)
           ?.map((e) => ContainerDTO.fromJson(e as Map<String, dynamic>))
           .toList(),
-      our_pharmacy: json['our_pharmacy'] as int?,
       pharmacy_number: json['pharmacy_number'] as String?,
     );
 
@@ -60,11 +60,11 @@ Map<String, dynamic> _$$_PointDTOToJson(_$_PointDTO instance) =>
       'point_type': instance.pointType,
       'order_type': instance.orderType,
       'is_deviation': instance.isDeviation,
+      'our_pharmacy': instance.ourPharmacy,
       'eta': instance.eta,
       'created_at': instance.createdAt,
       'products': instance.products,
       'containers': instance.containers,
-      'our_pharmacy': instance.our_pharmacy,
       'pharmacy_number': instance.pharmacy_number,
     };
 

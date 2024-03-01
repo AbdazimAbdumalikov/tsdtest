@@ -28,11 +28,11 @@ class PointDTO with _$PointDTO {
     @JsonKey(name: 'point_type') int? pointType,
     @JsonKey(name: 'order_type') int? orderType,
     @JsonKey(name: 'is_deviation') int? isDeviation,
+    @JsonKey(name: 'our_pharmacy') int? ourPharmacy,
     @JsonKey(name: 'eta') String? eta,
     @JsonKey(name: 'created_at') String? createdAt,
     List<ProductDTO>? products,
     List<ContainerDTO>? containers,
-    int? our_pharmacy,
     String? pharmacy_number,
   }) = _PointDTO;
 
